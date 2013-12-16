@@ -188,7 +188,6 @@
 	  <version>2.4.2</version>
 	  <configuration>
 	    <arguments>-Pattach-sources,attach-javadoc,sign</arguments>
-	    <tagNameFormat>v@{project.version}</tagNameFormat>
 	    <mavenExecutorId>forked-path</mavenExecutorId>
 	    <useReleaseProfile>false</useReleaseProfile>
 	    <localCheckout>true</localCheckout>
