@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>ch.sbs</groupId>
+  <artifactId>super-parent</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>SBS Parent POM</name>
+
+  <url>https://github.com/sbsdev/</url>
+
+  <organization>
+    <name>Swiss Library for the Blind, Visually Impaired and Print Disabled</name>
+    <url>http://www.sbs.ch/</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>GNU General Public License, Version 3</name>
+      <url>http://www.gnu.org/copyleft/gpl.html</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>eglic</id>
+      <name>Christian Egli</name>
+      <email>christian.egli@sbs.ch</email>
+      <organization>SBS - Schweizerische Bibliothek für Blinde, Seh- und Lesebehinderte</organization>
+      <organizationUrl>http://www.sbs.ch/</organizationUrl>
+      <roles>
+	<role>Developer</role>
+      </roles>
+      <timezone>UTC+01:00</timezone>
+    </developer>
+    <developer>
+      <id>bertfrees</id>
+      <name>Bert Frees</name>
+      <email>bertfrees@gmail.com</email>
+      <organization>SBS - Schweizerische Bibliothek für Blinde, Seh- und Lesebehinderte</organization>
+      <organizationUrl>http://www.sbs.ch/</organizationUrl>
+      <roles>
+	<role>Developer</role>
+      </roles>
+      <timezone>UTC+01:00</timezone>
+    </developer>
+  </developers>
+
+  <repositories>
+    <repository>
+      <id>sbs-nexus-snapshots</id>
+      <name>SBS Nexus Snapshots</name>
+      <url>http://xmlp-test:8081/nexus/content/repositories/snapshots/</url>
+      <releases>
+	<enabled>false</enabled>
+      </releases>
+      <snapshots>
+	<enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>sbs-nexus-releases</id>
+      <name>SBS Nexus Releases</name>
+      <url>http://xmlp-test:8081/nexus/content/repositories/releases/</url>
+      <releases>
+	<enabled>true</enabled>
+      </releases>
+      <snapshots>
+	<enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+  
+  <!-- for maven-nar-plugin: -->
+  <pluginRepositories>
+    <pluginRepository>
+      <id>bertfrees-github-snapshots</id>
+      <name>Bert's Github Snapshots</name>
+      <url>http://bertfrees.github.com/snapshots</url>
+    </pluginRepository>
+    <pluginRepository>
+      <id>duns-maven-snapshots</id>
+      <name>Duns' Github Snapshots</name>
+      <url>http://duns.github.com/maven-snapshots</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>sbs-nexus-snapshots</id>
+      <name>SBS Nexus Snapshots</name>
+      <url>http://xmlp-test:8081/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>sbs-nexus-releases</id>
+      <name>SBS Nexus Releases</name>
+      <url>http://xmlp-test:8081/nexus/content/repositories/releases/</url>
+    </repository>
+  </distributionManagement>
+
+  <prerequisites>
+    <maven>2.2.1</maven>
+  </prerequisites>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+
+  <scm>
+    <connection>scm:git:git://github.com/sbsdev/sbs-maven-parents.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:sbsdev/sbs-maven-parents.git</developerConnection>
+  </scm>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+	<plugin>
+	  <groupId>org.vafer</groupId>
+	  <artifactId>jdeb</artifactId>
+	  <version>1.0</version>
+	</plugin>
+	<plugin>
+	  <groupId>org.codehaus.mojo</groupId>
+	  <artifactId>shell-maven-plugin</artifactId>
+	  <version>1.0-beta-1</version>
+	</plugin>
+	<plugin>
+	  <artifactId>maven-nar-plugin</artifactId>
+	  <version>2.1-SNAPSHOT</version>
+	</plugin>
+	<plugin>
+	  <artifactId>maven-dependency-plugin</artifactId>
+	  <version>2.8</version>
+	</plugin>
+	<plugin>
+	  <artifactId>maven-clean-plugin</artifactId>
+	  <version>2.5</version>
+	</plugin>
+	<plugin>
+	  <artifactId>maven-deploy-plugin</artifactId>
+	  <version>2.7</version>
+	</plugin>
+	<plugin>
+	  <artifactId>maven-compiler-plugin</artifactId>
+	  <version>3.1</version>
+	  <configuration>
+	    <source>1.6</source>
+	    <target>1.6</target>
+	  </configuration>
+	</plugin>
+	<plugin>
+	  <artifactId>maven-install-plugin</artifactId>
+	  <version>2.4</version>
+	</plugin>
+	<plugin>
+	  <artifactId>maven-jar-plugin</artifactId>
+	  <version>2.4</version>
+	</plugin>
+	<plugin>
+	  <artifactId>maven-javadoc-plugin</artifactId>
+	  <version>2.9.1</version>
+	</plugin>
+	<plugin>
+	  <artifactId>maven-resources-plugin</artifactId>
+	  <version>2.6</version>
+	</plugin>
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>2.4</version>
+        </plugin>
+	<plugin>
+	  <artifactId>maven-gpg-plugin</artifactId>
+	  <version>1.4</version>
+	  <configuration>
+	    <useAgent>true</useAgent>
+	  </configuration>
+	</plugin>
+	<plugin>
+	  <artifactId>maven-antrun-plugin</artifactId>
+	  <version>1.7</version>
+	</plugin>
+	<plugin>
+	  <artifactId>maven-release-plugin</artifactId>
+	  <version>2.4.2</version>
+	  <configuration>
+	    <arguments>-Pattach-sources,attach-javadoc,sign</arguments>
+	    <tagNameFormat>v@{project.version}</tagNameFormat>
+	    <mavenExecutorId>forked-path</mavenExecutorId>
+	    <useReleaseProfile>false</useReleaseProfile>
+	    <localCheckout>true</localCheckout>
+	    <pushChanges>false</pushChanges>
+	    <goals>deploy</goals>
+	  </configuration>
+	</plugin>
+	<plugin>
+	  <artifactId>maven-source-plugin</artifactId>
+	  <version>2.2.1</version>
+	</plugin>
+	<plugin>
+	  <artifactId>maven-surefire-plugin</artifactId>
+	  <version>2.15</version>
+	</plugin>
+	<plugin>
+	  <artifactId>maven-surefire-report-plugin</artifactId>
+	  <version>2.15</version>
+	</plugin>
+	<plugin>
+	  <groupId>org.ops4j.pax.exam</groupId>
+	  <artifactId>mavenpaxexam</artifactId>
+	  <version>1.2.4</version>
+	</plugin>
+	<plugin>
+	  <groupId>org.apache.felix</groupId>
+	  <artifactId>maven-bundle-plugin</artifactId>
+	  <version>2.4.0</version>
+	  <extensions>true</extensions>
+	  <configuration>
+	    <archive>
+	      <addMavenDescriptor>false</addMavenDescriptor>
+	    </archive>
+	  </configuration>
+	</plugin>
+	<plugin>
+          <groupId>us.bryon</groupId>
+          <artifactId>relaxng-maven-plugin</artifactId>
+          <version>1.1</version>
+	</plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>xml-maven-plugin</artifactId>
+          <version>1.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <plugin>
+	<groupId>org.codehaus.mojo</groupId>
+	<artifactId>shell-maven-plugin</artifactId>
+	<executions>
+	  <execution>
+	    <id>generate-detailed-snapshot-version-filter</id>
+	    <phase>initialize</phase>
+	    <goals>
+	      <goal>shell</goal>
+	    </goals>
+	    <configuration>
+	      <workDir>${project.basedir}</workDir>
+	      <chmod>true</chmod>
+	      <script>
+		#!/bin/bash
+		PROJECT_VERSION=${project.version}
+		PROPERTIES_FILE=target/filters/detailed-version.properties
+		rm -rf $PROPERTIES_FILE
+		mkdir -p $( dirname $PROPERTIES_FILE )
+		printf 'project.detailedVersion=' &gt;&gt; $PROPERTIES_FILE
+		case $PROJECT_VERSION in
+		  *-SNAPSHOT)
+		    printf ${PROJECT_VERSION%-SNAPSHOT}~$( date +"%Y%m%d.%H%M%S" )-$( git describe --tags --always --dirty ) &gt;&gt; $PROPERTIES_FILE
+		    ;;
+		  *)
+		    printf $PROJECT_VERSION &gt;&gt; $PROPERTIES_FILE
+		    ;;
+		esac
+		printf '\n' &gt;&gt; $PROPERTIES_FILE
+	      </script>
+	    </configuration>
+	  </execution>
+	</executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>deb</id>
+      <activation>
+	<file>
+	  <exists>src/main/deb/DEBIAN/control</exists>
+	</file>
+      </activation>
+      <build>
+	<plugins>
+	  <plugin>
+	    <artifactId>maven-resources-plugin</artifactId>
+	    <executions>
+	      <execution>
+		<id>filter-deb</id>
+		<phase>process-resources</phase>
+		<goals>
+		  <goal>copy-resources</goal>
+		</goals>
+		<configuration>
+		  <outputDirectory>target/generated-resources/deb/DEBIAN</outputDirectory>
+		  <resources>
+		    <resource>
+		      <directory>src/main/deb/DEBIAN</directory>
+		      <filtering>true</filtering>
+		    </resource>
+		  </resources>
+		  <filters>
+		    <filter>target/filters/detailed-version.properties</filter>
+		  </filters>
+		</configuration>
+	      </execution>
+	    </executions>
+	  </plugin>
+	  <plugin>
+	    <groupId>org.vafer</groupId>
+	    <artifactId>jdeb</artifactId>
+	    <executions>
+	      <execution>
+		<id>package-deb</id>
+		<phase>package</phase>
+		<goals>
+		  <goal>jdeb</goal>
+		</goals>
+		<configuration>
+		  <controlDir>target/generated-resources/deb/DEBIAN</controlDir>
+		  <classifier>all</classifier>
+		  <deb>target/${project.artifactId}_${project.version}_all.deb</deb>
+		</configuration>
+	      </execution>
+	    </executions>
+	  </plugin>
+	</plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>sign</id>
+      <build>
+	<plugins>
+	  <plugin>
+	    <artifactId>maven-gpg-plugin</artifactId>
+	    <executions>
+	      <execution>
+		<id>sign-artifacts</id>
+		<phase>verify</phase>
+		<goals>
+		  <goal>sign</goal>
+		</goals>
+	      </execution>
+	    </executions>
+	  </plugin>
+	</plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>attach-sources</id>
+      <build>
+	<plugins>
+	  <plugin>
+	    <artifactId>maven-source-plugin</artifactId>
+	    <executions>
+	      <execution>
+		<id>attach-sources</id>
+		<goals>
+		  <goal>jar-no-fork</goal>
+		</goals>
+	      </execution>
+	    </executions>
+	  </plugin>
+	</plugins>
+      </build>
+    </profile>
+     <profile>
+      <id>attach-javadoc</id>
+      <build>
+	<plugins>
+	  <plugin>
+	    <artifactId>maven-javadoc-plugin</artifactId>
+	    <executions>
+	      <execution>
+		<id>attach-javadocs</id>
+		<goals>
+		  <goal>jar</goal>
+		</goals>
+	      </execution>
+	    </executions>
+	  </plugin>
+	</plugins>
+      </build>
+    </profile>
+ </profiles>
+
+</project>
