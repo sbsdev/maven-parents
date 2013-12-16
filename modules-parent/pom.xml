@@ -18,8 +18,8 @@
   <name>DAISY Pipeline 2 :: SBS Modules Parent POM</name>
 
   <scm>
-    <connection>scm:git:git://github.com/sbsdev/sbs-maven-parents.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:sbsdev/sbs-maven-parents.git</developerConnection>
+    <connection>scm:git:git://github.com/sbsdev/maven-parents.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:sbsdev/maven-parents.git</developerConnection>
   </scm>
 
   <build>
