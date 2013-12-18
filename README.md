@@ -5,14 +5,14 @@ Mavent parent pom for SBS projects
 ## Build
 
 ```sh
-$ mvn clean deploy
+mvn clean deploy
 ```
 
 ## Release
 
 ```sh
-$ mvn release:clean release:prepare -DdryRun=true
-$ mvn release:clean release:prepare release:perform
+mvn release:clean release:prepare -DdryRun=true
+mvn release:clean release:prepare release:perform
 ```
 
 ## Authors
