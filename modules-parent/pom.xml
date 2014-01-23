@@ -6,8 +6,8 @@
   <parent>
     <groupId>ch.sbs</groupId>
     <artifactId>super-parent</artifactId>
-    <version>1.0</version>
-    <relativePath />
+    <version>1.1-SNAPSHOT</version>
+    <relativePath>../super-parent/</relativePath>
   </parent>
 
   <groupId>ch.sbs.pipeline</groupId>
