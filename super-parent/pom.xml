@@ -92,12 +92,12 @@
     <snapshotRepository>
       <id>sbs-nexus-snapshots</id>
       <name>SBS Nexus Snapshots</name>
-      <url>http://xmlp-test:8081/nexus/content/repositories/snapshots/</url>
+      <url>http://repo:8081/nexus/content/repositories/snapshots/</url>
     </snapshotRepository>
     <repository>
       <id>sbs-nexus-releases</id>
       <name>SBS Nexus Releases</name>
-      <url>http://xmlp-test:8081/nexus/content/repositories/releases/</url>
+      <url>http://repo:8081/nexus/content/repositories/releases/</url>
     </repository>
   </distributionManagement>
 
