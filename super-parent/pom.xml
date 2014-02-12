@@ -5,7 +5,7 @@
 
   <groupId>ch.sbs</groupId>
   <artifactId>super-parent</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1</version>
   <packaging>pom</packaging>
 
   <name>SBS Parent POM</name>
@@ -113,7 +113,7 @@
   <scm>
     <connection>scm:git:git://github.com/sbsdev/maven-parents.git</connection>
     <developerConnection>scm:git:ssh://git@github.com:sbsdev/maven-parents.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>super-parent-1.1</tag>
   </scm>
 
   <build>
