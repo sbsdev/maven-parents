@@ -15,6 +15,14 @@ mvn release:clean release:prepare -DdryRun=true
 mvn release:clean release:prepare release:perform
 ```
 
+## Generate a dependency graph
+
+Generate a graph of all the dependencies using the [Maven Graph Plugin][].
+
+```sh
+mvn -P graph graph:project
+```
+
 ## Authors
 
 - [Bert Frees][frees]
@@ -22,7 +30,7 @@ mvn release:clean release:prepare release:perform
 
 ## License
 
-Copyright 2013 [Swiss Library for the Blind, Visually Impaired and Print Disabled][sbs]
+Copyright 2014 [Swiss Library for the Blind, Visually Impaired and Print Disabled][sbs]
 
 Licensed under [GNU General Public License][] as published by the Free
 Software Foundation, either version 3 of the License, or (at your
@@ -33,3 +41,4 @@ option) any later version.
 [egli]: https://github.com/egli
 [sbs]: http://www.sbs.ch/
 [GNU General Public License]: http://www.gnu.org/licenses/gpl.html
+[Maven Graph Plugin]: http://mvnplugins.fusesource.org/maven/1.4/maven-graph-plugin/index.html
