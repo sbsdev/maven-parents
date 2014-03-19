@@ -59,6 +59,8 @@
       </releases>
       <snapshots>
 	<enabled>true</enabled>
+	<updatePolicy>always</updatePolicy>
+	<checksumPolicy>warn</checksumPolicy>
       </snapshots>
     </repository>
     <repository>
@@ -67,6 +69,8 @@
       <url>http://repo:8081/nexus/content/repositories/releases/</url>
       <releases>
 	<enabled>true</enabled>
+	<updatePolicy>never</updatePolicy>
+	<checksumPolicy>fail</checksumPolicy>
       </releases>
       <snapshots>
 	<enabled>false</enabled>
