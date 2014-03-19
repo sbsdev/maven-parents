@@ -234,6 +234,11 @@
           <artifactId>xml-maven-plugin</artifactId>
           <version>1.0</version>
         </plugin>
+	<plugin>
+	  <groupId>org.jasig.maven</groupId>
+	  <artifactId>sass-maven-plugin</artifactId>
+	  <version>1.0.1</version>
+	</plugin>      
       </plugins>
     </pluginManagement>
 
@@ -367,7 +372,7 @@
 	</plugins>
       </build>
     </profile>
-     <profile>
+    <profile>
       <id>attach-javadoc</id>
       <build>
 	<plugins>
