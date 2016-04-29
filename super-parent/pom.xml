@@ -81,11 +81,6 @@
   <!-- for maven-nar-plugin: -->
   <pluginRepositories>
     <pluginRepository>
-      <id>bertfrees-github-snapshots</id>
-      <name>Bert's Github Snapshots</name>
-      <url>http://bertfrees.github.com/snapshots</url>
-    </pluginRepository>
-    <pluginRepository>
       <id>duns-maven-snapshots</id>
       <name>Duns' Github Snapshots</name>
       <url>http://duns.github.com/maven-snapshots</url>
