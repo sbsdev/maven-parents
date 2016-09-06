@@ -263,7 +263,7 @@
 		  <goal>copy-resources</goal>
 		</goals>
 		<configuration>
-		  <outputDirectory>target/generated-resources/deb/DEBIAN</outputDirectory>
+		  <outputDirectory>${project.build.directory}/generated-resources/deb/DEBIAN</outputDirectory>
 		  <resources>
 		    <resource>
 		      <directory>src/main/deb/DEBIAN</directory>
@@ -271,7 +271,7 @@
 		    </resource>
 		  </resources>
 		  <filters>
-		    <filter>target/filters/detailed-version.properties</filter>
+		    <filter>${project.build.directory}/filters/detailed-version.properties</filter>
 		  </filters>
 		</configuration>
 	      </execution>
@@ -288,9 +288,9 @@
 		  <goal>jdeb</goal>
 		</goals>
 		<configuration>
-		  <controlDir>target/generated-resources/deb/DEBIAN</controlDir>
+		  <controlDir>${project.build.directory}/generated-resources/deb/DEBIAN</controlDir>
 		  <classifier>all</classifier>
-		  <deb>target/${project.artifactId}_${project.version}_all.deb</deb>
+		  <deb>${project.build.directory}/${project.artifactId}_${project.version}_all.deb</deb>
 		</configuration>
 	      </execution>
 	    </executions>
