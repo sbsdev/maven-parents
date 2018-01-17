@@ -51,14 +51,14 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>sbs-nexus-snapshots</id>
-      <name>SBS Nexus Snapshots</name>
-      <url>http://repo:8081/nexus/content/repositories/snapshots/</url>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
     </snapshotRepository>
     <repository>
-      <id>sbs-nexus-releases</id>
-      <name>SBS Nexus Releases</name>
-      <url>http://repo:8081/nexus/content/repositories/releases/</url>
+      <id>sonatype-nexus-staging</id>
+      <name>Nexus Release Repository</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
 
