@@ -9,7 +9,7 @@
   <packaging>pom</packaging>
 
   <name>SBS Parent POM</name>
-
+  <description>Parent POM for all Maven based projects at SBS</description>
   <url>https://github.com/sbsdev/</url>
 
   <organization>
@@ -75,6 +75,7 @@
     <connection>scm:git:git://github.com/sbsdev/maven-parents.git</connection>
     <developerConnection>scm:git:ssh://git@github.com:sbsdev/maven-parents.git</developerConnection>
     <tag>HEAD</tag>
+    <url>https://github.com/sbsdev/maven-parents/tree/master</url>
   </scm>
 
   <build>
