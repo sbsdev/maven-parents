@@ -6,7 +6,7 @@
   <parent>
     <groupId>ch.sbs</groupId>
     <artifactId>super-parent</artifactId>
-    <version>1.5</version>
+    <version>1.6</version>
     <relativePath>../super-parent/</relativePath>
   </parent>
 
