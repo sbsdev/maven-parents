@@ -6,7 +6,7 @@
   <parent>
     <groupId>ch.sbs</groupId>
     <artifactId>super-parent</artifactId>
-    <version>1.6</version>
+    <version>1.7</version>
     <relativePath>../super-parent/</relativePath>
   </parent>
 
@@ -16,11 +16,14 @@
   <packaging>pom</packaging>
 
   <name>DAISY Pipeline 2 :: SBS Modules Parent POM</name>
+  <description>Parent POM for all Maven based pipeline module projects at SBS</description>
+  <url>https://github.com/sbsdev/maven-parents</url>
 
   <scm>
     <connection>scm:git:git://github.com/sbsdev/maven-parents.git</connection>
     <developerConnection>scm:git:ssh://git@github.com:sbsdev/maven-parents.git</developerConnection>
     <tag>HEAD</tag>
+    <url>https://github.com/sbsdev/maven-parents/tree/master</url>
   </scm>
 
   <build>
