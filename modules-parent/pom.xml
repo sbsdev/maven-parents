@@ -37,6 +37,8 @@
 
   <properties>
     <pipeline.version>1.11.1</pipeline.version>
+    <!-- braille modules: using own branch based on an older version -->
+    <pipeline.braille.version>1.10.2-SNAPSHOT</pipeline.braille.version>
   </properties>
 
   <dependencyManagement>
@@ -75,7 +77,7 @@
       <dependency>
         <groupId>org.daisy.pipeline.modules.braille</groupId>
         <artifactId>braille-modules-bom</artifactId>
-        <version>${pipeline.version}</version>
+        <version>${pipeline.braille.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
