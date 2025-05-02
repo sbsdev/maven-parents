@@ -18,6 +18,13 @@ after that make sure the artifacts are pushed to Maven Central by
 closing and releasing them in the
 [Sonatype Nexus Repository Manager](https://oss.sonatype.org/#stagingRepositories).
 
+## Check for outdated dependencies
+
+```sh
+mvn versions:display-dependency-updates
+mvn versions:display-plugin-updates
+```
+
 ## Generate a dependency graph
 
 Generate a graph of all the dependencies using the [Maven Graph Plugin][].

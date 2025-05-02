@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.daisy.pipeline.modules</groupId>
     <artifactId>modules-parent</artifactId>
-    <version>1.14.9</version>
+    <version>1.14.30</version>
   </parent>
 
   <groupId>ch.sbs.pipeline</groupId>
@@ -81,7 +81,7 @@
         <plugin>
           <groupId>org.vafer</groupId>
           <artifactId>jdeb</artifactId>
-          <version>1.0</version>
+          <version>1.13</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -90,7 +90,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-release-plugin</artifactId>
-          <version>2.5.1</version>
+          <version>3.1.1</version>
           <configuration>
             <arguments>-Pattach-sources,attach-javadoc,sign</arguments>
             <mavenExecutorId>forked-path</mavenExecutorId>
@@ -103,6 +103,26 @@
       </plugins>
     </pluginManagement>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>3.5.0</version>
+        <executions>
+          <execution>
+            <id>enforce-maven</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>3.6.3</version>
+                </requireMavenVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>shell-maven-plugin</artifactId>
@@ -139,6 +159,16 @@
       </plugin>
     </plugins>
   </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+	<groupId>org.codehaus.mojo</groupId>
+	<artifactId>versions-maven-plugin</artifactId>
+	<version>2.18.0</version>
+      </plugin>
+    </plugins>
+  </reporting>
 
   <profiles>
     <profile>
@@ -266,7 +296,7 @@
           <plugin>
             <groupId>org.fusesource.mvnplugins</groupId>
             <artifactId>maven-graph-plugin</artifactId>
-            <version>1.4</version>
+            <version>1.45</version>
           </plugin>
         </plugins>
       </build>
